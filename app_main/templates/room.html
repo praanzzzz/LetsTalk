@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="text-center">
+
+    <h3 style="margin-top: 100px;">ID: {{rooms.id}}</h3>
+    <h3>Room Name: {{rooms.name}} </h3>
+ 
+    <p>Description: {{rooms.description}}</p>
+    <p>Created: {{rooms.created}}</p>
+
+
+    <h4>Topic: {{rooms.topic}}</h4>
+</div>
+  
+{% endblock %}

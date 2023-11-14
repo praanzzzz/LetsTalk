@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--cdn js font awesome for icons version 6.1.1-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  <!--linking the css file. much better way than hardcoding the url-->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">  <!--bootswatch theme-->
+</head>
+<body>
+    <!-- include sidebar here- py function -->
+
+    {% block content %}
+
+    {% endblock %}
+    
+      <!--version bootstrap 5.0-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+</body>
+</html>

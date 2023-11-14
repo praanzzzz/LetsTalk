@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div style="margin: 10px 30px 50px 100px">
+
+<h1 style="margin-top: 100px;">UPDATE ROOM FORM</h1>
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="Submit" value="Submit" />
+</form>
+
+</div>
+  
+{% endblock %}
