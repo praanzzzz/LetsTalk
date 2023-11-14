@@ -1,6 +1,6 @@
 # LetsTalk
 A platform where users can talk any topic, create or join a room and engage with the community.
-
+It is built with Django Framework and SQLite database.
 
 --> Move into the directory where we have the project files : 
 ```bash
