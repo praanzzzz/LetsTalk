@@ -1,0 +1,53 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container" style="text-align: left; margin-top: 110px; width: 70%">
+    <!-- login -->
+  {% if page == 'login' %}
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        <fieldset>
+          <legend>LOGIN</legend>
+          
+          <div class="form-group">
+            <label for="exampleInputEmail1" class="form-label mt-4">Username</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="username" placeholder="Enter Username">
+          </div>
+          
+          <div class="form-group">
+            <label for="exampleInputPassword1" class="form-label mt-4">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Enter Password" autocomplete="off">
+          </div>
+          <button type="submit" class="btn btn-primary">Login</button>
+        </fieldset>
+      </form>
+
+      <p>Haven't signed up yet?</p>
+      <a href="{% url 'registerPage' %}">Create Account</a> ||| <a href="{% url 'home' %}">Home</a>
+
+</div>
+
+  {% else %}
+
+<div>
+      <!-- register -->
+      <form method="POST" action="">
+        {% csrf_token %}
+        <fieldset>
+          <legend>REGISTER</legend>
+          {{ form.as_p }}
+          
+          <button type="submit" class="btn btn-primary">Register</button>
+        </fieldset>
+      </form>
+
+      <p>Already have an account?</p>
+      <a href="{% url 'loginPage' %}">Login</a> ||| <a href="{% url 'home' %}">Home</a>
+</div>
+
+  {% endif%}
+
+
+{% endblock %}
